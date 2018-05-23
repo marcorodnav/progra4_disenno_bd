@@ -5,7 +5,8 @@ no tiene relevancia con el diseño, es simplemente a modo de introducción a la 
 
 ## Tablas
 ### 1. persona
-  Tabla utilizada para representar a las personas involucradas en el sistema. Con respecto al enunciado, se identifican
+
+···Tabla utilizada para representar a las personas involucradas en el sistema. Con respecto al enunciado, se identifican
 dos tipos de usuarios (clientes y administradores), que van a compartir los mismos atributos. 
 
 ### 2. rol
