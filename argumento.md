@@ -1,43 +1,43 @@
 # Base de datos: boleteria_progra
 
-   El diseño propuesto consta de 15 tablas. A continuación se listan las mismas; cabe aclarar que el orden siguiente
+··El diseño propuesto consta de 15 tablas. A continuación se listan las mismas; cabe aclarar que el orden siguiente
 no tiene relevancia con el diseño, es simplemente a modo de introducción a la responsabilidad de cada tabla:
 ## Tablas
 ### 1. persona
-   Tabla utilizada para representar a las personas involucradas en el sistema. Con respecto al enunciado, se identifican
-   dos tipos de usuarios (clientes y administradores), que van a compartir los mismos atributos. 
+··Tabla utilizada para representar a las personas involucradas en el sistema. Con respecto al enunciado, se identifican
+dos tipos de usuarios (clientes y administradores), que van a compartir los mismos atributos. 
 ### 2. rol
-   Tabla utilizada para controlar los roles disponibles en el sistema, se identifican por el momento: clientes y administradores.
+··Tabla utilizada para controlar los roles disponibles en el sistema, se identifican por el momento: clientes y administradores.
 ### 3. direccion
-   Tabla que representa una direccion, consta de una referencia segun lo acostumbrado: Provincia, Canton, Distrito y una descripción
-   para completar la dirección exacta.
+··Tabla que representa una direccion, consta de una referencia segun lo acostumbrado: Provincia, Canton, Distrito y una descripción
+para completar la dirección exacta.
 ### 4. provincia
-   Utilizada para almacenar las provincias
+··Utilizada para almacenar las provincias
 ### 5. canton
-   Utilizada para almacenar los cantones de las provincias
+··Utilizada para almacenar los cantones de las provincias
 ### 6. distrito
-   Utilizada para almacenar los distritos de los cantones
+··Utilizada para almacenar los distritos de los cantones
 ### 7. actividad
-   Tabla utilizada para almacenar los shows, espectáculos y demás opciones que vayan a estar disponibles en la aplicación.
+··Tabla utilizada para almacenar los shows, espectáculos y demás opciones que vayan a estar disponibles en la aplicación.
 ### 8. escenario
-   Tabla utilizada para almacenar la información del lugar físico (dígase "escenario") en el que va a realizarse un evento.
+··Tabla utilizada para almacenar la información del lugar físico (dígase "escenario") en el que va a realizarse un evento.
 ### 9. seccion
-   Tabla utilizada para registrar la información de las secciones disponibles en un escenario.
+··Tabla utilizada para registrar la información de las secciones disponibles en un escenario.
 ### 10. asiento
-   Tabla utilizada para registrar la lista de todos los asientos disponibles en las secciones (ligadas a un escenario en específico).
+··Tabla utilizada para registrar la lista de todos los asientos disponibles en las secciones (ligadas a un escenario en específico).
 ### 11. evento
-   Tabla utilizada para representar un evento que estará disponible en el sistema de boleteria. Esta tabla es de las más importantes
-   para el diseño planteado. Un evento representará la presentación de una actividad, en un momento (fecha y hora) determinado, en un
-   escenario en especifico.
+··Tabla utilizada para representar un evento que estará disponible en el sistema de boleteria. Esta tabla es de las más importantes
+para el diseño planteado. Un evento representará la presentación de una actividad, en un momento (fecha y hora) determinado, en un
+escenario en especifico.
 ### 12. eventos_por_escenario
-   Tabla utilizada para normalizar la relación "muchos a muchos" que existe entre la tabla eventos y la tabla escenarios.
+··Tabla utilizada para normalizar la relación "muchos a muchos" que existe entre la tabla eventos y la tabla escenarios.
 ### 13. asiento_reservado
-   Tabla empleada para representar un asiento que fue reservado para un evento, y que esta ligado a un boleto de dicho evento.
+··Tabla empleada para representar un asiento que fue reservado para un evento, y que esta ligado a un boleto de dicho evento.
 ### 14. estado_reservacion_asiento
-   Tabla empleada para los estados de una reserva de un asiento para un evento en particular. Utilizado para controlar el tiempo de gracia
+··Tabla empleada para los estados de una reserva de un asiento para un evento en particular. Utilizado para controlar el tiempo de gracia
 de 5min que tiene un usuario para completar la reserva, indicar que la reserva esta activa o bien, inactivarla cuando el evento ya pasó.
 ### 15. boleto
-   Tabla que representa una compra en la aplicacion. Un boleto mantiene una referencia al evento para el que se compró, el asiento que le
+··Tabla que representa una compra en la aplicacion. Un boleto mantiene una referencia al evento para el que se compró, el asiento que le
 corresponde como reservado y la persona que lo compro. Adicional mantiene un atributo para denotar si es una entrada valida (si el boleto
 esta activo). Se consideran inactivos boletos que referencian a un evento de una fecha pasada de la actual.
 
@@ -74,11 +74,11 @@ de personas que van a ser permitidas en dicha sección.
 
 
 #### 3. Primer cliente interesado en comprar entradas a través de la aplicación
-   El cliente llega a la pantalla de registro, completa los datos necesarios y hace inicio de sesión en la aplicación.
-   En el "home page" se muestran las actividades disponibles. Al seleccionar la actividad de interés, debe escoger la fecha del
+··El cliente llega a la pantalla de registro, completa los datos necesarios y hace inicio de sesión en la aplicación.
+··En el "home page" se muestran las actividades disponibles. Al seleccionar la actividad de interés, debe escoger la fecha del
 evento al que está interesado asistir.
-   Selecciona el concierto de Roger Waters. Ingresa la cantidad de boletos que desea comprar. A partir de este momento la reserva del asiento en particular queda con un estado "pendiente de completar", el cual cambiará ya sea a "reservado" o se eliminara el registro de la tabla _asiento_reservado_ luego de completada la compra o de 5 min. 
-   Continua con la compra hasta que hace _chekout_ donde queda registrada la compra de los boletos.
+··Selecciona el concierto de Roger Waters. Ingresa la cantidad de boletos que desea comprar. A partir de este momento la reserva del asiento en particular queda con un estado "pendiente de completar", el cual cambiará ya sea a "reservado" o se eliminara el registro de la tabla _asiento_reservado_ luego de completada la compra o de 5 min. 
+··Continua con la compra hasta que hace _chekout_ donde queda registrada la compra de los boletos.
 
 
 
