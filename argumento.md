@@ -2,12 +2,15 @@
 
 ··El diseño propuesto consta de 15 tablas. A continuación se listan las mismas; cabe aclarar que el orden siguiente
 no tiene relevancia con el diseño, es simplemente a modo de introducción a la responsabilidad de cada tabla:
+
 ## Tablas
 ### 1. persona
-··Tabla utilizada para representar a las personas involucradas en el sistema. Con respecto al enunciado, se identifican
+  Tabla utilizada para representar a las personas involucradas en el sistema. Con respecto al enunciado, se identifican
 dos tipos de usuarios (clientes y administradores), que van a compartir los mismos atributos. 
+
 ### 2. rol
 ··Tabla utilizada para controlar los roles disponibles en el sistema, se identifican por el momento: clientes y administradores.
+
 ### 3. direccion
 ··Tabla que representa una direccion, consta de una referencia segun lo acostumbrado: Provincia, Canton, Distrito y una descripción
 para completar la dirección exacta.
